@@ -50,7 +50,7 @@ Detection answers *"What objects are present, and where are they?"* --- each obj
 Now we could answer *"Which pixels belong to which object?"* --- but we were still treating each object in isolation. The scene was a bag of labeled regions, with no structure connecting them.
 
 <figure>
-<img src="/assets/images/blog/scene-graphs/cv-evolution.svg" alt="Evolution of visual scene understanding from classification to scene graphs">
+<img src="/assets/images/blog/scene-graphs/cv-evolution.png" alt="Evolution of visual scene understanding from classification to scene graphs">
 <figcaption>Figure 1. The evolution of visual scene understanding: from whole-image classification (2012), to object detection with bounding boxes (2014), to pixel-level segmentation (2015), to structured scene graphs that capture relationships (2017).</figcaption>
 </figure>
 
@@ -181,7 +181,7 @@ Systems like Hydra perform all of this incrementally in real time, making scene 
 Why are scene graphs particularly compelling for robotics? Because robots need to *reason* about their environment, not just perceive it. Scene graphs bridge the gap between low-level perception and high-level reasoning.
 
 <figure>
-<img src="/assets/images/blog/scene-graphs/robot-scene-graph-pipeline.svg" alt="Robotic perception pipeline using scene graphs">
+<img src="/assets/images/blog/scene-graphs/robot-scene-graph-pipeline.png" alt="Robotic perception pipeline using scene graphs">
 <figcaption>Figure 4. A scene-graph-based robotic perception pipeline: raw sensor data is processed into detections and 3D reconstructions, which are structured into a 3D scene graph. The graph then supports task planning, spatial queries, and LLM-based reasoning, ultimately driving robot actions like navigation and manipulation.</figcaption>
 </figure>
 
