@@ -1,0 +1,4 @@
+title: Mukhammadrizo Maribjonov
+url: "https://mrizo-maruf.github.io"
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/

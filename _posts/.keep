@@ -1,0 +1,12 @@
+This directory holds blog posts. To add a new post, create a Markdown file named:
+
+    YYYY-MM-DD-title-of-post.md
+
+with front matter at the top:
+
+    ---
+    layout: post
+    title: "Your Post Title"
+    ---
+
+    Your content here in Markdown...
