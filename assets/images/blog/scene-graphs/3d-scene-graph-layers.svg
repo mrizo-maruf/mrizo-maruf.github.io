@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="uparrow" markerWidth="8" markerHeight="6" refX="4" refY="6" orient="auto">
+      <polygon points="0 6, 4 0, 8 6" fill="#999"/>
+    </marker>
+    <filter id="dshadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#fafafa" rx="8"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#333" font-weight="bold">Hierarchical 3D Scene Graph (Hydra, Hughes et al. 2022)</text>
+
+  <!-- Layer 5: Building -->
+  <rect x="280" y="50" width="240" height="50" rx="10" fill="#e8eaf6" stroke="#5c6bc0" stroke-width="2" filter="url(#dshadow)"/>
+  <text x="400" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3949ab" font-weight="bold">Building Layer</text>
+  <text x="400" y="88" text-anchor="middle" font-family="monospace" font-size="10" fill="#7986cb">Whole-building topology</text>
+  <text x="540" y="80" font-family="Georgia, serif" font-size="11" fill="#5c6bc0" font-style="italic">Level 5</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="100" x2="400" y2="125" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Layer 4: Rooms -->
+  <rect x="200" y="125" width="400" height="60" rx="10" fill="#e0f2f1" stroke="#00897b" stroke-width="2" filter="url(#dshadow)"/>
+  <text x="400" y="148" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#00695c" font-weight="bold">Room Layer</text>
+  <text x="400" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#4db6ac">Rooms and their connectivity</text>
+  <!-- Room nodes -->
+  <circle cx="270" cy="155" r="12" fill="#b2dfdb" stroke="#00897b" stroke-width="1.5"/>
+  <text x="270" y="159" text-anchor="middle" font-family="monospace" font-size="7" fill="#00695c">kitchen</text>
+  <circle cx="400" cy="155" r="12" fill="#b2dfdb" stroke="#00897b" stroke-width="1.5"/>
+  <text x="400" y="159" text-anchor="middle" font-family="monospace" font-size="7" fill="#00695c">living</text>
+  <circle cx="530" cy="155" r="12" fill="#b2dfdb" stroke="#00897b" stroke-width="1.5"/>
+  <text x="530" y="159" text-anchor="middle" font-family="monospace" font-size="7" fill="#00695c">hallway</text>
+  <line x1="282" y1="155" x2="388" y2="155" stroke="#00897b" stroke-width="1"/>
+  <line x1="412" y1="155" x2="518" y2="155" stroke="#00897b" stroke-width="1"/>
+  <text x="620" y="155" font-family="Georgia, serif" font-size="11" fill="#00897b" font-style="italic">Level 4</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="185" x2="400" y2="210" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Layer 3: Places -->
+  <rect x="140" y="210" width="520" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00" stroke-width="2" filter="url(#dshadow)"/>
+  <text x="400" y="233" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#e65100" font-weight="bold">Places Layer</text>
+  <text x="400" y="250" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffb74d">Free-space topology (navigation graph)</text>
+  <!-- Place nodes (smaller, denser) -->
+  <circle cx="210" cy="240" r="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <circle cx="240" cy="238" r="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <circle cx="270" cy="242" r="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <line x1="216" y1="239" x2="234" y2="239" stroke="#ef6c00" stroke-width="0.8"/>
+  <line x1="246" y1="239" x2="264" y2="241" stroke="#ef6c00" stroke-width="0.8"/>
+  <circle cx="500" cy="238" r="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <circle cx="530" cy="242" r="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <circle cx="560" cy="236" r="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <line x1="506" y1="239" x2="524" y2="241" stroke="#ef6c00" stroke-width="0.8"/>
+  <line x1="536" y1="240" x2="554" y2="237" stroke="#ef6c00" stroke-width="0.8"/>
+  <text x="680" y="240" font-family="Georgia, serif" font-size="11" fill="#ef6c00" font-style="italic">Level 3</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="270" x2="400" y2="295" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Layer 2: Objects -->
+  <rect x="80" y="295" width="640" height="60" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2" filter="url(#dshadow)"/>
+  <text x="400" y="318" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#b71c1c" font-weight="bold">Object Layer</text>
+  <text x="400" y="335" text-anchor="middle" font-family="monospace" font-size="10" fill="#ef9a9a">3D object instances with semantic labels &amp; poses</text>
+  <!-- Object nodes -->
+  <rect x="130" y="314" width="38" height="16" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="149" y="325" text-anchor="middle" font-family="monospace" font-size="7" fill="#b71c1c">table</text>
+  <rect x="185" y="314" width="38" height="16" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="204" y="325" text-anchor="middle" font-family="monospace" font-size="7" fill="#b71c1c">chair</text>
+  <rect x="240" y="314" width="32" height="16" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="256" y="325" text-anchor="middle" font-family="monospace" font-size="7" fill="#b71c1c">mug</text>
+  <rect x="490" y="314" width="32" height="16" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="506" y="325" text-anchor="middle" font-family="monospace" font-size="7" fill="#b71c1c">sofa</text>
+  <rect x="540" y="314" width="52" height="16" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="566" y="325" text-anchor="middle" font-family="monospace" font-size="7" fill="#b71c1c">lamp</text>
+  <rect x="610" y="314" width="52" height="16" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="636" y="325" text-anchor="middle" font-family="monospace" font-size="7" fill="#b71c1c">book</text>
+  <text x="740" y="325" font-family="Georgia, serif" font-size="11" fill="#c62828" font-style="italic">Level 2</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="355" x2="400" y2="380" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Layer 1: Metric-Semantic Mesh -->
+  <rect x="40" y="380" width="720" height="55" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" filter="url(#dshadow)"/>
+  <text x="400" y="403" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#6a1b9a" font-weight="bold">Metric-Semantic Mesh</text>
+  <text x="400" y="420" text-anchor="middle" font-family="monospace" font-size="10" fill="#ba68c8">Dense 3D mesh with per-vertex semantic labels</text>
+  <!-- Mesh visualization hint -->
+  <polygon points="100,415 115,405 130,415" fill="none" stroke="#9c27b0" stroke-width="0.8"/>
+  <polygon points="115,405 130,415 145,405" fill="none" stroke="#9c27b0" stroke-width="0.8"/>
+  <polygon points="130,415 145,405 160,415" fill="none" stroke="#9c27b0" stroke-width="0.8"/>
+  <polygon points="145,405 160,415 175,405" fill="none" stroke="#9c27b0" stroke-width="0.8"/>
+  <polygon points="600,415 615,405 630,415" fill="none" stroke="#9c27b0" stroke-width="0.8"/>
+  <polygon points="615,405 630,415 645,405" fill="none" stroke="#9c27b0" stroke-width="0.8"/>
+  <polygon points="630,415 645,405 660,415" fill="none" stroke="#9c27b0" stroke-width="0.8"/>
+  <text x="780" y="410" font-family="Georgia, serif" font-size="11" fill="#7b1fa2" font-style="italic">Level 1</text>
+
+  <!-- Side label -->
+  <text x="20" y="260" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#666" transform="rotate(-90, 20, 260)">Increasing Abstraction</text>
+  <line x1="35" y1="100" x2="35" y2="420" stroke="#ccc" stroke-width="1" marker-start="url(#uparrow)"/>
+
+  <!-- Bottom caption -->
+  <text x="400" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#888">Each layer captures a different level of spatial and semantic abstraction.</text>
+  <text x="400" y="482" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#888">Higher layers enable high-level reasoning; lower layers preserve geometric detail.</text>
+</svg>
